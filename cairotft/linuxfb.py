@@ -203,4 +203,4 @@ def cairo_surface_from_fbmem(fbmem, mem, cairo_format):
         cairo_format,  # cairo.FORMAT_RGB24,  # cairo.FORMAT_RGB16_565, etc...
         fbmem.var_info.xres,
         fbmem.var_info.yres,
-        fbmem.fix_info.line_length)
+        cairo.ImageSurface.format_stride_for_width(cairo_format, fbmem.var_info.xres))
