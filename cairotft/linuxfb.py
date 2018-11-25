@@ -62,7 +62,8 @@ class FixScreenInfo(ctypes.Structure):
         ('mmio_start', ctypes.c_ulong),
         ('mmio_len', ctypes.c_uint32),
         ('accel', ctypes.c_uint32),
-        ('reserved', ctypes.c_uint16 * 3),
+        ('capabilities', ctypes.c_uint16),
+        ('reserved', ctypes.c_uint16 * 2),
     ]
 
 
